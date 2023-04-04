@@ -4,6 +4,8 @@
 ![minified + gzipped](https://badgen.net/bundlephobia/minzip/react-loading-overlay)
 [![downloads](https://badgen.net/npm/dw/react-loading-overlay)](https://www.npmjs.com/package/react-loading-overlay)
 
+This package is generated from a fork of Derrick Pelletier's original react-loading-overlay. I needed a version that was compatible with React 18, and so generated this package with minimal changes from his original version.
+
 A customizable, simple loading overlay with spinner and transitions.
 
 ![](https://github.com/derrickpelletier/react-loading-overlay/blob/master/docs/rlo-example.gif?raw=true)
