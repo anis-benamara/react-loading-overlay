@@ -1,7 +1,10 @@
+/**
+ * @jest-environment jsdom
+ */
 /* global jest, describe, it, expect, afterEach */
 import LoadingOverlay from '../src/LoadingOverlay'
 import React, { Component } from 'react'
-import { render, fireEvent, cleanup } from 'react-testing-library'
+import { render, fireEvent, cleanup } from '@testing-library/react'
 
 jest.useFakeTimers()
 
@@ -12,12 +15,15 @@ class DelayedInactive extends Component {
     super(props)
     this.state = { active: true }
   }
+
   componentDidMount () {
     this.timer = setTimeout(() => this.setState({ active: false }), 600)
   }
+
   componentWillUnmount () {
     clearTimeout(this.timer)
   }
+
   render () {
     return <LoadingOverlay {...this.props} active={this.state.active} />
   }

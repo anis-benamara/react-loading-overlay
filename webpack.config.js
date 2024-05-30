@@ -1,12 +1,18 @@
-var config = {
+module.exports = {
   mode: process.env.NODE_ENV,
   entry: './src/LoadingOverlay.js',
   output: {
     library: 'LoadingOverlay',
     libraryTarget: 'umd'
   },
+  stats: {
+    colors: true,
+    modules: true,
+    reasons: true,
+    errorDetails: true
+  },
   externals: {
-    'react': {
+    react: {
       root: 'React',
       commonjs2: 'react',
       commonjs: 'react',
@@ -24,5 +30,3 @@ var config = {
     ]
   }
 }
-
-module.exports = config

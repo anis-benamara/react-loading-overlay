@@ -1,4 +1,4 @@
-import { keyframes } from 'emotion'
+import { keyframes } from '@emotion/css'
 
 const rotate360 = keyframes`
   from {

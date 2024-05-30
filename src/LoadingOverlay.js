@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { CSSTransition } from 'react-transition-group'
-import { css, cx } from 'emotion'
+import { css, cx } from '@emotion/css'
 
 import Spinner from './components/Spinner'
 import STYLES from './styles'
@@ -22,7 +22,7 @@ class LoadingOverlayWrapper extends Component {
     this.setState({ overflowCSS })
   }
 
-  componentDidUpdate (prevProps) {
+  componentDidUpdate (prevProps, _, __) {
     const { active } = this.props
     if (active) this.wrapper.current.scrollTop = 0
   }
@@ -112,7 +112,7 @@ LoadingOverlayWrapper.propTypes = {
   onClick: PropTypes.func,
   className: PropTypes.string,
   classNamePrefix: PropTypes.string,
-  spinner: PropTypes.oneOfType([ PropTypes.bool, PropTypes.node ]),
+  spinner: PropTypes.oneOfType([PropTypes.bool, PropTypes.node]),
   text: PropTypes.node,
   styles: PropTypes.shape({
     content: PropTypes.func,
